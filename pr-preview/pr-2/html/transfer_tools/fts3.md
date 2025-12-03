@@ -1,2 +1,0 @@
-::: rucio.transfertool.fts3
-
