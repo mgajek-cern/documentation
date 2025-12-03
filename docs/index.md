@@ -5,6 +5,8 @@ sidebar_label: "Welcome"
 slug: /
 ---
 
+Verifying `deploy_pr_preview.yaml` workflow behavior trough fork-pull request 2.
+
 Rucio is a project that provides services and associated libraries for allowing
 scientific collaborations to manage large volumes of data spread across
 facilities at multiple institutions and organisations. Rucio was originally
