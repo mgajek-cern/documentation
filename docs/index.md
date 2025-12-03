@@ -5,10 +5,12 @@ sidebar_label: "Welcome"
 slug: /
 ---
 
+Verifying `deploy_pr_preview.yaml` workflow behavior trough fork-pull request 1.
+
 Rucio is a project that provides services and associated libraries for allowing
 scientific collaborations to manage large volumes of data spread across
 facilities at multiple institutions and organisations. Rucio was originally
-developed to meet the requirements of the high-energy physics experiment
+developed to meet thes requirements of the high-energy physics experiment
 [ATLAS](https://atlas.cern/), and now is continuously extended to support the
 LHC experiments and other diverse scientific communities.
 
