@@ -409,9 +409,9 @@ Rucio will look for the config in the following locations -
 #### **opendata**
 - **rule_enable**: _(Optional)_ Boolean. Enables automatic Open Data rule creation. Default: `False`.
 - **rule_rse_expression**: _(Optional)_ Mandatory if `rule_enable=True`. RSE expression defining where data should be replicated.
-- **rule_asynchronous**: _(Optional)_ Boolean. If `True`, rules are created asynchronously. Default: `False`.  
-- **rule_activity**: _(Optional)_. Specifies the activity name used for rule creation. Defaults to Rucio's default activity name. 
-- **rule_account**: _(Optional)_. Account name used to create rules. Default: `"root"`.  
+- **rule_asynchronous**: _(Optional)_ Boolean. If `True`, rules are created asynchronously. Default: `False`.
+- **rule_activity**: _(Optional)_. Specifies the activity name used for rule creation. Defaults to Rucio's default activity name.
+- **rule_account**: _(Optional)_. Account name used to create rules. Default: `"root"`.
 - **rule_vo**: _(Optional)_. Virtual Organization (VO) under which rules are created. Defaults to Rucio's default VO.
 - **rule_copies**: _(Optional)_ Integer. Number of copies to be created by the rule. Default: `1`.
 
@@ -514,7 +514,7 @@ and how to set them up [here](operator/configuration.md#creating-new-rses).
 - **rse**: String: The name of the Rucio Storage Element as given at creation time. Cannot be changed.
 - **rse_type**: String: Specify `DISK` or `TAPE` for control of [QoS](operator/qos_rse_config.md). Default: `DISK`.
 - **sign_url**: Optional[str]. Enable cloud support for this storage element. No default.
-- **staging_area**: Boolean.Specify if this RSE is a disk buffer to a tertiary storage backend, subject to additional constraints (specifically a lifetime for rules on this RSE must be defined). Default: `False`.
+- **staging_area**: Boolean. Specify if this RSE is a disk buffer to a tertiary storage backend, subject to additional constraints (specifically a lifetime for rules on this RSE must be defined). Default: `False`.
 - **third_party_copy_read_protocol**: Integer: Cannot be changed. Controls matching of protocol priorities for TPC reads. Default `1`.
 - **third_party_copy_write_protocol**: Integer: Cannot be changed. Controls matching of protocol priorities for TPC writes. Default `1`.
 - **verify_checksum**: Boolean: Specifies if the RSE has support for checksum verification. Default: `True`.

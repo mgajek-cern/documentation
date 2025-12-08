@@ -425,7 +425,7 @@ expected_scope = 'openid profile'
 Parameters __idpsecrets__ and __admin_issuer__ have to be present.
 __IdP nickname__ stands for your preferred IdP (e.g. 'wlcg'). The IdP
 specified under __admin_issuer__ will be contacted to get information about Rucio
-Users (SCIM) and to request tokens for the Rucio __root__ account.  The
+Users (SCIM) and to request tokens for the Rucio __root__ account. The
 __expected_scope__ and __expected_audence__ parameters are optional and if not filled,
 the Rucio server will set them to `openid profile` and `rucio`
 respectively. The expected scopes and audiences have to be configured

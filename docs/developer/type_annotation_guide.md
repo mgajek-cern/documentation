@@ -33,7 +33,7 @@ PR, we will introduce the hints incrementally.
 
 ### General Information
 
-- [**PEP 483 – The Theory of Type Hints**](https://peps.python.org/pep-0483/)
+- [**PEP 483–The Theory of Type Hints**](https://peps.python.org/pep-0483/)
   This _PEP_ explains the theory behind type hints, as well as backgrounds to
   certain decisions.
 
@@ -47,11 +47,11 @@ annotate python code with type hints. E.g.:
   sheet contains information on the syntax of type annotations and _which ones_
   to use _when_.
 
-- [**PEP 484 – Type Hints**](https://peps.python.org/pep-0484/) Contains general
+- [**PEP 484–Type Hints**](https://peps.python.org/pep-0484/) Contains general
   information about type hints in Python. This includes the motivation, the
   definition, what to do with edge cases, and much more.
 
-- [**PEP 589 – TypedDict: Type Hints for Dictionaries with a Fixed Set of
+- [**PEP 589–TypedDict: Type Hints for Dictionaries with a Fixed Set of
   Keys**](https://peps.python.org/pep-0589/) Explains how to use `TypedDict` and
   what to regard while using them.
 
@@ -277,8 +277,8 @@ common variables with their corresponding type:
 
 | Code section | Variable | Type | Description |
 | ------------ | -------- | ------------------------------ | ----------------------- |
-| * | session | sqlalchemy.orm.session.Session | The sqlalchemy session. |
-| DID | scope | `str` | The scope of a DID.  |
-| DID | name | `str` | The name of a DID.  |
-| DID | account | `str` | The account name.  |
-| DID | did_type | `str` | The DID type.  |
+| * | session | `sqlalchemy.orm.session.Session` | The sqlalchemy session. |
+| DID | scope | `str` | The scope of a DID. |
+| DID | name | `str` | The name of a DID. |
+| DID | account | `str` | The account name. |
+| DID | did_type | `str` | The DID type. |

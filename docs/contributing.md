@@ -219,7 +219,7 @@ variables as follows:
 
 * `PARALLEL_AUTOTESTS` 0/1 (default: 1)
 
-    1 enables multiple processes to run autotests and 0 disables it.  When
+    1 enables multiple processes to run autotests and 0 disables it. When
     enabled, logs of the running autotests will be written to the `.autotest`
     directory created in the working directory. Otherwise the log output will be
     written to the console (stderr).

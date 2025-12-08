@@ -9,7 +9,7 @@ sidebar_position: 5
 Rucio includes a client class to remove some of the complexity of dealing with
 raw HTTP requests against the RESTful API.
 
-All client methods are accessible through the high-level class Client.  Below is
+All client methods are accessible through the high-level class Client. Below is
 one example of using Rucio Client class:
 
 ```python
@@ -87,7 +87,7 @@ JSON for large answer), e.g.:
 
 ### Error handling
 
-Errors are returned using standard HTTP error code syntax.  Additional info is
+Errors are returned using standard HTTP error code syntax. Additional info is
 included in the header or the body of the return call, JSON-formatted with the
 parameters:
 

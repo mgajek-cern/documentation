@@ -18,7 +18,7 @@ An example listing of replication rules is given below:
 A rule engine validates the rules and creates transfer primitives to fulfil all
 rules, e.g. transfer a file from RSE A to RSE B. The rule engine is triggered
 when a new rule is defined on an existing data identifier, or when a file is
-added to a dataset with existing rules.  The rule engine will only create the
+added to a dataset with existing rules. The rule engine will only create the
 minimum set of necessary transfer primitives to satisfy all rules.
 
 Notifications can be provided for rules and their underlying transfer

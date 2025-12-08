@@ -317,8 +317,8 @@ after every single render of the component!
 
 This is a custom hook returning a `UseComDOM<T>` (Communication Document Object
 Model) object. It serves as a wrapper for streamed data, also providing
-functions to inspect and control the stream.  It is a generic which is bound to
-type `T`, which itself is usually a ViewModel.  The `useComDOM`-hook is most
+functions to inspect and control the stream. It is a generic which is bound to
+type `T`, which itself is usually a ViewModel. The `useComDOM`-hook is most
 strongly associated with the StreamedTables, whose documentation can be found
 [here](./streamedtables.md).
 
@@ -345,12 +345,7 @@ return {
 } as ResponsiveHook
 ```
 
-The width classes in pixels correspond to those defined by
-[Tailwind](#responsive-design).
-
-
-
-
+The width classes follow the pixel values defined by [Tailwind](#responsive-design).
 
 ### Tailwind
 Tailwind is the CSS framework which we use to style our components. Instead of writing
@@ -471,7 +466,7 @@ EventListener and all these thresholds into a reusable hook.
 #### Compiling Tailwind
 
 Tailwind compiles the minimal stylesheet required to use all the classes defined
-in the project.  The stylesheet is then automatically loaded by the relevant
+in the project. The stylesheet is then automatically loaded by the relevant
 NextJS components and made available in every page of the WebUI. You can find
 the compiled stylesheet under `src/component-library/outputtailwind.css`, where
 it lives at the top-level folder of the `component-library` with the other
@@ -534,7 +529,7 @@ change the value of `title` in the default export.
 :::
 
 An example of how arguments are passed into a storybook function can be seen in
-the following code block.  Fixtures and the `mockUseComDOM`-function will be
+the following code block. Fixtures and the `mockUseComDOM`-function will be
 explained below.
 
 ```tsx
@@ -564,7 +559,7 @@ mock fixture.
 The `table-fixtures.ts`-file contains a fixture which deserves to be mentioned
 by itself: the `mockUseComDOM`-function, which takes a list of datapoints of
 type `T` and then mocks the `UseComDOM<T>` object. This ComDOM-object can then
-be passed on to StreamedTables.  Since the relevant attributes and methods that
+be passed on to StreamedTables. Since the relevant attributes and methods that
 the StreamedTable accesses are all fully mocked, this function allows you to
 show StreamedTables with mock data and interfacing even when no backend is
 connected.

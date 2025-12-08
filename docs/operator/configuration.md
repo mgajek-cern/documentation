@@ -16,15 +16,15 @@ further information
 The first step is to create new accounts:
 
 ```bash
-  $ rucio-admin account add --type USER --email jdoe@blahblih.com jdoe
+  $rucio-admin account add --type USER --email jdoe@blahblih.com jdoe
 ```
 
 You can choose from different types in the list USER, GROUP, SERVICE. Different
-policies/permissions can be set depending on the account type.  Once the account
+policies/permissions can be set depending on the account type. Once the account
 is created, you need to create and attach an identity to this account:
 
 ```bash
-  $ rucio-admin identity add --type X509 \
+  $rucio-admin identity add --type X509 \
       --id "CN=jdoe,OU=Users,OU=Organic Units,DC=blih,DC=blah" \
       --email jdoe@blahblih.com --account jdoe
 ```
@@ -65,14 +65,14 @@ option:
 
 By default, X509 identities must be formatted according to the relevant RFCs: a
 comma-separated list of the DN components, ordered last-to-first (e.g.
-`CN=jdoe,OU=Users,OU=Organic Units,DC=blih,DC=blah`).  However, operators might
+`CN=jdoe,OU=Users,OU=Organic Units,DC=blih,DC=blah`). However, operators might
 prefer to store them in the legacy format: a slash-separated list of the DN
 components, starting with a slash, ordered first-to-last (e.g.
 `/DC=blah/DC=blih/OU=Organic Units/OU=Users/CN=jdoe`).
 
 To do so, it is necessary to enable the `LegacyDNStringFormat` configuration
-option of mod_ssl.  When using the official Rucio container images, one must set
-the `RUCIO_HTTPD_LEGACY_DN` environmental variable to `True`.  For custom
+option of mod_ssl. When using the official Rucio container images, one must set
+the `RUCIO_HTTPD_LEGACY_DN` environmental variable to `True`. For custom
 installations, one must edit the appropriate Apache configuration file so that
 the `SSLOptions` directive looks like this:
 

@@ -21,7 +21,7 @@ a data identifier (DID). Thus for files, the Logical File Name (LFN), a term
 commonly used in DataGrid terminology to identify files is equivalent to the DID
 in Rucio.
 
-The scope string partitions the namespace into several sub namespaces.  The
+The scope string partitions the namespace into several sub namespaces. The
 primary use case for this is to easily separate centrally created data from
 individual user data.
 
@@ -29,7 +29,7 @@ By default, accounts have read access to all scopes and write access only to
 their own scope. Privileged accounts have write access to multiple scopes, e.g.,
 the Workload Management System is allowed to write into official data scopes.
 
-Files, datasets and containers are uniquely identified over all time.  This
+Files, datasets and containers are uniquely identified over all time. This
 means that a data identifier, once used, can never be reused to refer to
 anything else at all, not even if the data it referred to has been deleted from
 the system.
@@ -61,7 +61,7 @@ The dataset/container status is reflected by a set of attributes:
 
 - `is_open`: True/False
 
-If a dataset/container is open, content can be added to it.  Datasets/containers
+If a dataset/container is open, content can be added to it. Datasets/containers
 are created open and once closed, they cannot be opened again[^1].
 
 - `monotonic`: True/False
@@ -72,7 +72,7 @@ non-monotonic. Once set to monotonic, this cannot be reversed.
 
 - `complete`: True/False
 
-A dataset/container where all files have replicas available is complete.  Any
+A dataset/container where all files have replicas available is complete. Any
 dataset/container which contains files without replicas is incomplete. This is a
 derived attribute.
 

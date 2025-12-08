@@ -14,7 +14,7 @@ the Tier-1 RSEs, or the 'good' RSEs. One can reference groups of RSEs by
 metadata attributes or by explicit enumeration of RSEs. See the section about
 [RSE Expressions](rse_expressions.md) for more information.
 
-RSE tags are expanded at transfer time to enumerate target sites.  Post-facto
+RSE tags are expanded at transfer time to enumerate target sites. Post-facto
 changes to the sites in an RSE tag list will not affect currently replicated
 files.
 

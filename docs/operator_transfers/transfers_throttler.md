@@ -10,7 +10,7 @@ transfers at any particular moment of time.
 Preparer is required to be able to run throttler. See the preparer documentation
 on how to activate it.
 
-The rucio administrator must manually configure throttling rules.  As of time
+The rucio administrator must manually configure throttling rules. As of time
 of writing, there is no CLI option in rucio-admin to do it. Rules have to be
 added using the rucio core functions directly from a rucio node.
 

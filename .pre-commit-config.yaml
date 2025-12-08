@@ -45,3 +45,10 @@ repos:
   rev: v2.2.4
   hooks:
   - id: codespell
+    exclude: ^styles/
+- repo: https://github.com/errata-ai/vale
+  rev: v3.13.0
+  hooks:
+  - id: vale
+    files: ^docs/.*\.md$
+    exclude: ^docs/bin/|^tools/release-notes/

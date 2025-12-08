@@ -6,66 +6,70 @@ on:
     - cron: '0 4 * * 1-5'
 
 jobs:
-  check_markdown_syntax:
-    name: Check Markdown Syntax
+  format_checks:
+    name: Format Checks
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install pre-commit==4.5.0
+      - run: pre-commit run check-yaml --all-files
+      - run: pre-commit run end-of-file-fixer --all-files
+      - run: pre-commit run trailing-whitespace --all-files
+      - run: pre-commit run check-json --all-files
+
+  python_checks:
+    name: Python Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install pre-commit==4.5.0
+      - run: pre-commit run black --all-files
+      - run: pre-commit run isort --all-files
+      - run: pre-commit run flake8 --all-files
+      - run: pre-commit run mypy --all-files
+
+  shell_checks:
+    name: Shell Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install pre-commit==4.5.0
+      - run: pre-commit run shellcheck --all-files
+
+  markdown_checks:
+    name: Markdown Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4
-      - name: Install markdownlint
-        run: |
-          gem install mdl
-      - name: Lint docs
-        run: |
-          ./tools/check-docs.sh
-  check_file_names:
-    name: Check File Names
+      - run: gem install mdl
+      - run: pip install pre-commit==4.5.0
+      - run: pre-commit run check-markdown --all-files
+      - run: pre-commit run check-file-names --all-files
+      - run: pre-commit run codespell --all-files
+
+  vale_checks:
+    name: Vale Style Checks
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Check file names
-        run: |
-          ./tools/check-file-names.sh
-  check_shell_scripts:
-    name: Check Shell Scripts
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Install dependencies
-        run: |
-          sudo apt-get install --yes shellcheck
-      - name: Check Shell Scripts
-        run: |
-          shellcheck **/*.sh
-  check_python_scripts:
-    name: Check Python Scripts
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Install dependencies
-        run: |
-          pip install -r tools/requirements.txt
-      - name: Run black
-        run: |
-          black --check .
-      - name: Run isort
-        run: |
-          isort --profile black --filter-files --check .
-      - name: Run flake8
-        run: |
-          flake8 --config tools/.flake8
-      - name: MyPy
-        run: |
-          mypy --ignore-missing-imports .
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install vale==3.13.0.0 pre-commit==4.5.0
+      - run: pre-commit run vale --all-files
+
   build:
     name: Build
-    needs: [check_markdown_syntax, check_file_names, check_shell_scripts, check_python_scripts]
+    needs: [format_checks, python_checks, shell_checks, markdown_checks, vale_checks]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

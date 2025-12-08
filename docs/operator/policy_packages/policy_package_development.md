@@ -41,7 +41,7 @@ experiment-rucio-policy-package
 #### `SUPPORTED_VERSION`
 
 `__init__.py` should define a `str | list[str]` called `SUPPORTED_VERSION`,
-indicating the version(s) of Rucio that your package supports.
+indicating the version/s of Rucio that your package supports.
 
 This is checked against the Rucio server
 version to ensure compatibility when loading the policy package.

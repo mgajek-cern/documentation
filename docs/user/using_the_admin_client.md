@@ -40,7 +40,7 @@ To create a new account:
 ```
 
 You can choose different types in the list USER, GROUP, SERVICE. Different
-policies/permissions can be set depending on the account type.  Once the account
+policies/permissions can be set depending on the account type. Once the account
 is created, you need to create and attach an identity to this account:
 
 ```bash

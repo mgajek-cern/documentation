@@ -114,7 +114,7 @@ Rucio server side in the *idpsecrets.json* file). In the following examples we
 assume that user does not want to use the rucio account name specified in the
 *rucio.cfg* file on the client side (if so `-a` parameter can be omitted).  If
 *auth_type* is specified to be "oidc" in the *rucio.cfg* file, `-S` can be
-omitted as well.  Furthermore, we use the same default issuer as configured on
+omitted as well. Furthermore, we use the same default issuer as configured on
 Rucio server side.
 
 1. Login via user's browser + fetch code:
@@ -204,7 +204,7 @@ rucio -v whoami
 
 and follow the instruction for first log-in with your browser. New token will be
 requested before the current expires if a user types a rucio command within
-`auth_oidc_refresh_before_exp` minutes before the expiry.  Note: If user does
+`auth_oidc_refresh_before_exp` minutes before the expiry. Note: If user does
 not use Rucio Client within `auth_oidc_refresh_before_exp` minutes before token
 expires, it will be necessary to re-authenticate asking for a new offline_access
 token.
